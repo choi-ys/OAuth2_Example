@@ -1,0 +1,23 @@
+ToDo List
+- [#01]Intellij를 이용한 Spring Boot Project 생성
+    - Authorization Server Porject 생성에 필요한 의존성 추가
+    - Application 실행/테스트 환경의 DataBase Scope 설정을 위한 pom.xml 수정
+- [#02]GitHub Repository생성 및 Project Push
+- [#03]Index API 및 TC 작성
+- [#04]Token발급을 위한 Autorization Server 설정
+    - Authorization Server 설정을 위한 spring-security-oauth2-autoconfigure dependency 추가
+    - AuthorizationServerConfig 설정 파일 작성
+        - InMemory환경에서 authorization_code방식의 인증 토큰 발급을 위한 설정 추가
+    - SecurityConfig 설정 파일 작성
+        - InMemory환경에서 Token발급 대상인 사용자 정보 설정 추가
+        - 토큰 발급 시 요청 Method인 POST 요청 임시 허용 설정 추가
+- [#05]DB환경에서  Token발급 대상인 사용자 정보 생성 API 구현
+    - 사용자 도메인 및 DB Table 생성
+    - 사용자 정보 생성 API 구현
+        - Repository : 사용자 도메인 DB 저장
+        - Service : 사용자 정보 생성 비지니스 로직 처리
+        - Controller : 사용자 정보 생성 요청/응답 반환 처리
+    - Spring Security의 UserDetailsService를 통해 생성한 사용자 정보를 조회한 AuthenticationManger에 등록
+- [#06]인증된 사용자 계정에 clinet 정보 발급 API 구현
+- [#07]DB환경의 사용자 정보와 Client 정보를 참조한 Token 발급
+- [#08]Refresh Token을 이용한 Access Token 갱신
